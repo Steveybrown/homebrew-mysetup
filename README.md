@@ -1,6 +1,6 @@
 # mysetup Homebrew tap
 
-The mysetup command-line client for macOS and Linux. Coming soon:
+The mysetup command-line client for macOS and Linux. Install:
 
 ```sh
 brew install mysetupai/tap/mysetup
