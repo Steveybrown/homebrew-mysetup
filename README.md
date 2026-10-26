@@ -3,7 +3,7 @@
 The mysetup command-line client for macOS and Linux. Coming soon:
 
 ```sh
-brew install Steveybrown/mysetup/mysetup
+brew install mysetupai/tap/mysetup
 ```
 
 See https://mysetup.ai/download.
