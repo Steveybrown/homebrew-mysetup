@@ -11,8 +11,8 @@ class Mysetup < Formula
   desc "Keep your AI agent skills in sync across your computers (preview)"
   homepage "https://mysetup.ai"
   # The macOS universal binary is the default; Linux selects its static build per CPU.
-  url "https://mysetup.ai/cli/releases/0.1.3/mysetup-0.1.3-macos-universal.tar.gz"
-  sha256 "5adf33c8206a33477252ce37bdcf49f28f454b84e190131067530f7197786c01"
+  url "https://mysetup.ai/cli/releases/0.2.0/mysetup-0.2.0-macos-universal.tar.gz"
+  sha256 "bbc3971ab581e8a00e14e012ee297bda2d48d1aef9bc028a3e8a16fa2dc4e22b"
   license :cannot_represent
 
   livecheck do
@@ -26,12 +26,12 @@ class Mysetup < Formula
 
   on_linux do
     on_intel do
-      url "https://mysetup.ai/cli/releases/0.1.3/mysetup-0.1.3-linux-x86_64.tar.gz"
-      sha256 "49baf0dc70aa4f407aaf484417fa7750fd43562cf4a17d94a5172c334a6e49ce"
+      url "https://mysetup.ai/cli/releases/0.2.0/mysetup-0.2.0-linux-x86_64.tar.gz"
+      sha256 "8325df0329be36cb68b500028eb72b686359eea25eab9c6a64733e8bd6c58ae5"
     end
     on_arm do
-      url "https://mysetup.ai/cli/releases/0.1.3/mysetup-0.1.3-linux-arm64.tar.gz"
-      sha256 "b1b91ec681803d66709f68db499b13775db0da11e21a078327803a8d962a6b9e"
+      url "https://mysetup.ai/cli/releases/0.2.0/mysetup-0.2.0-linux-arm64.tar.gz"
+      sha256 "c7f83e2250f386e9a35867250e8de03d0b48bb4a3996ad135c09393b2ff75db9"
     end
   end
 
@@ -41,15 +41,18 @@ class Mysetup < Formula
 
   def caveats
     <<~EOS
-      Get started with guided private sync:
+      Get started:
+
         mysetup onboard
-      It helps you sign in, choose skills and connect another device.
-      Nothing is published. Background sync stays off until you choose to enable it.
-      For individual commands: mysetup help
-      After `brew upgrade mysetup`, run `mysetup service restart` to use the new version.
-      Before `brew uninstall mysetup`, run `mysetup auth logout` to sign out, then
-      `mysetup self uninstall` to turn background sync off. Uninstalling never removes
-      your skills.
+
+      Sign in, choose your skills and connect another device.
+      Nothing is published, and background sync stays off until you turn it on.
+
+      After upgrading:      mysetup service restart
+      Before uninstalling:  mysetup auth logout, then mysetup self uninstall
+                            (your skills are never removed)
+
+      All commands: mysetup help
     EOS
   end
 
